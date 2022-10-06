@@ -11,10 +11,12 @@ export function Footer() {
         <div className="py-16">
           <Logo className="mx-auto h-10 w-auto" />
           <nav className="mt-10 text-sm" aria-label="quick links">
-            <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+            <div className="-my-1 flex justify-center gap-x-6 font-bold">
+              <NavLink href="#features">회사소개</NavLink>
+              <NavLink href="#testimonials">서비스</NavLink>
+              <NavLink href="#pricing">자주묻는질문</NavLink>
+              <NavLink href="#pricing">보도자료</NavLink>
+              <NavLink href="#pricing">고객센터</NavLink>
             </div>
           </nav>
         </div>

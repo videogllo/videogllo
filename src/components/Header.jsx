@@ -93,12 +93,12 @@ export function Header() {
   return (
     <header className="py-10">
       <Container>
-        <nav className="relative z-50 flex justify-between">
+        <nav className="relative z-50 flex justify-center">
           <div className="flex items-center md:gap-x-12">
             <Link href="#" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
-            <div className="hidden md:flex md:gap-x-6">
+            <div className="hidden md:flex md:gap-x-6 ml-12 font-bold">
               <NavLink href="#features">회사소개</NavLink>
               <NavLink href="#testimonials">서비스</NavLink>
               <NavLink href="#pricing">자주묻는질문</NavLink>
@@ -107,14 +107,14 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               <NavLink href="/login">Sign in</NavLink>
             </div>
             <Button href="/register" color="blue">
               <span>
                 Get started <span className="hidden lg:inline">today</span>
               </span>
-            </Button>
+            </Button> */}
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
