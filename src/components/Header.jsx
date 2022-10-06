@@ -99,9 +99,11 @@ export function Header() {
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="#features">회사소개</NavLink>
+              <NavLink href="#testimonials">서비스</NavLink>
+              <NavLink href="#pricing">자주묻는질문</NavLink>
+              <NavLink href="#pricing">보도자료</NavLink>
+              <NavLink href="#pricing">고객센터</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
