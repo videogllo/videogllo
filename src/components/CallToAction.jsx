@@ -7,7 +7,7 @@ import backgroundImage from '@/images/background-call-to-action.jpg'
 export function CallToAction() {
   return (
     <section
-      id="get-started-today"
+      id="qna"
       className="relative overflow-hidden bg-blue-600 py-32"
     >
       <Image
@@ -20,7 +20,7 @@ export function CallToAction() {
       />
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
+          {/* <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             Get started today
           </h2>
           <p className="mt-4 text-lg tracking-tight text-white">
@@ -29,7 +29,7 @@ export function CallToAction() {
           </p>
           <Button href="/register" color="white" className="mt-10">
             Get 6 months free
-          </Button>
+          </Button> */}
         </div>
       </Container>
     </section>

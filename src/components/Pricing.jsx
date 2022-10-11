@@ -96,12 +96,12 @@ function Plan({ name, price, description, href, features, featured = false }) {
 export function Pricing() {
   return (
     <section
-      id="pricing"
+      id="as"
       aria-label="Pricing"
       className="bg-slate-900 py-20 sm:py-32"
     >
       <Container>
-        <div className="md:text-center">
+        {/* <div className="md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-blue-400" />
@@ -113,8 +113,8 @@ export function Pricing() {
             It doesn’t matter what size your business is, our software won’t
             work well for you.
           </p>
-        </div>
-        <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
+        </div> */}
+        {/* <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             name="Starter"
             price="$9"
@@ -157,7 +157,7 @@ export function Pricing() {
               'Export up to 25 reports, including TPS',
             ]}
           />
-        </div>
+        </div> */}
       </Container>
     </section>
   )
