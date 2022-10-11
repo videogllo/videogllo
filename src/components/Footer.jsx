@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-slate-50">
       <Container>
-        <div className="py-16 flex justify-center items-center">
+        {/* <div className="py-16 flex justify-center items-center">
           <Logo className="mx-auto h-10 w-auto" />
           <nav className="text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6 font-bold ml-12">
@@ -19,7 +19,15 @@ export function Footer() {
               <NavLink href="#pricing">고객센터</NavLink>
             </div>
           </nav>
+        </div> */}
+
+        <div className="pt-12 text-sm pb-6 flex flex-col justify-center items-start text-slate-500">
+          <p>비데오글로</p>
+          <p>사업자 번호: 000-00000-0000</p>
+          <p>주소: 서울특별시 강서구 마곡중앙6로 11 315호 비데오글로</p>
+          <p>고객센터: 02-2039-1690</p>
         </div>
+
         <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
             <Link

@@ -3,58 +3,61 @@ import Image from 'next/future/image'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-faqs.jpg'
 
-const faqs = [
-  [
-    {
-      question: 'Does TaxPal handle VAT?',
-      answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+const posts = [
+  {
+    title: '뉴스 제목1',
+    href: '#',
+    category: { name: '뉴스', href: '#' },
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    imageUrl:
+      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+    readingTime: '6 min',
+    author: {
+      name: 'Roel Aufderehar',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
-    {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
+  },
+  {
+    title: '뉴스 제목2',
+    href: '#',
+    category: { name: '수상', href: '#' },
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
+    date: 'Mar 10, 2020',
+    datetime: '2020-03-10',
+    imageUrl:
+      'https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+    readingTime: '4 min',
+    author: {
+      name: 'Brenna Goyette',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
-    {
-      question: 'How do I apply for a job at TaxPal?',
-      answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+  },
+  {
+    title: '뉴스 제목3',
+    href: '#',
+    category: { name: '사회 공헌', href: '#' },
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
+    date: 'Feb 12, 2020',
+    datetime: '2020-02-12',
+    imageUrl:
+      'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+    readingTime: '11 min',
+    author: {
+      name: 'Daniela Metz',
+      href: '#',
+      imageUrl:
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
-  ],
-  [
-    {
-      question: 'What was that testimonial about tax fraud all about?',
-      answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
-    },
-    {
-      question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
-      answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
-    },
-    {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
-      answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
-    },
-  ],
-  [
-    {
-      question: 'How do you generate reports?',
-      answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
-    },
-    {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
-    },
-    {
-      question: 'I lost my password, how do I get into my account?',
-      answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
-    },
-  ],
+  },
 ]
 
 export function Faqs() {
@@ -104,6 +107,58 @@ export function Faqs() {
             </li>
           ))}
         </ul> */}
+
+        <div className="relative bg-gray-50 px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
+          <div className="absolute inset-0">
+            <div className="h-1/3 bg-white sm:h-2/3" />
+          </div>
+          <div className="relative mx-auto max-w-7xl">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                보도자료
+              </h2>
+              {/* <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
+                저희 비데오글로는 각종 매스컴에 출현했습니다.
+              </p> */}
+            </div>
+            <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+              {posts.map((post) => (
+                <div
+                  key={post.title}
+                  className="flex flex-col overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer"
+                >
+                  <div className="flex-shrink-0">
+                    <img
+                      className="h-48 w-full object-cover"
+                      src={post.imageUrl}
+                      alt=""
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col justify-between bg-white p-6">
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-indigo-600">
+                        <a
+                          href={post.category.href}
+                          className="hover:underline"
+                        >
+                          {post.category.name}
+                        </a>
+                      </p>
+                      <a href={post.href} className="mt-2 block">
+                        <p className="text-xl font-semibold text-gray-900">
+                          {post.title}
+                        </p>
+                        <p className="mt-3 text-base text-gray-500">
+                          {post.description}
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </Container>
     </section>
   )

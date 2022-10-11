@@ -2,6 +2,13 @@ import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { useState } from 'react'
+
+const index = [
+  { index: 1, title: 'Q. question1?', description: 'Description1.' },
+  { index: 2, title: 'Q. question2?', description: 'Description2.' },
+  { index: 3, title: 'Q. question3?', description: 'Description3.' },
+]
 
 function SwirlyDoodle({ className }) {
   return (
@@ -94,70 +101,71 @@ function Plan({ name, price, description, href, features, featured = false }) {
 }
 
 export function Pricing() {
+  const [tableToggleState, setTableToggleState] = useState(null)
+
+  const tableToggle = (id) => {
+    setTableToggleState(id)
+  }
   return (
     <section
       id="as"
       aria-label="Pricing"
       className="bg-slate-900 py-20 sm:py-32"
     >
-      <Container>
-        {/* <div className="md:text-center">
+      <Container className="relative">
+        <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-            <span className="relative whitespace-nowrap">
-              <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-blue-400" />
-              <span className="relative">Simple pricing,</span>
-            </span>{' '}
-            for everyone.
+            자주 묻는 질문
           </h2>
-          <p className="mt-4 text-lg text-slate-400">
-            It doesn’t matter what size your business is, our software won’t
-            work well for you.
+          {/* <p className="mt-4 text-lg tracking-tight text-white">
+            It’s time to take control of your books. Buy our software so you can
+            feel like you’re doing something productive.
           </p>
-        </div> */}
-        {/* <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
-          <Plan
-            name="Starter"
-            price="$9"
-            description="Good for anyone who is self-employed and just getting started."
-            href="/register"
-            features={[
-              'Send 10 quotes and invoices',
-              'Connect up to 2 bank accounts',
-              'Track up to 15 expenses per month',
-              'Manual payroll support',
-              'Export up to 3 reports',
-            ]}
-          />
-          <Plan
-            featured
-            name="Small business"
-            price="$15"
-            description="Perfect for small / medium sized businesses."
-            href="/register"
-            features={[
-              'Send 25 quotes and invoices',
-              'Connect up to 5 bank accounts',
-              'Track up to 50 expenses per month',
-              'Automated payroll support',
-              'Export up to 12 reports',
-              'Bulk reconcile transactions',
-              'Track in multiple currencies',
-            ]}
-          />
-          <Plan
-            name="Enterprise"
-            price="$39"
-            description="For even the biggest enterprise companies."
-            href="/register"
-            features={[
-              'Send unlimited quotes and invoices',
-              'Connect up to 15 bank accounts',
-              'Track up to 200 expenses per month',
-              'Automated payroll support',
-              'Export up to 25 reports, including TPS',
-            ]}
-          />
-        </div> */}
+          <Button href="/register" color="white" className="mt-10">
+            Get 6 months free
+          </Button> */}
+          <div className="mt-8 flex flex-col">
+            <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                  <table className="min-w-full divide-y divide-gray-300">
+                    <tbody className="bg-white">
+                      {index.map((i, i2) => (
+                        <tr
+                          key={i.index}
+                          className={
+                            i2 % 2 === 0
+                              ? 'flex flex-col text-left'
+                              : 'flex flex-col bg-gray-50 text-left'
+                          }
+                        >
+                          <td
+                            className="flex whitespace-nowrap px-3 py-4 text-left text-sm text-gray-500 transition-all duration-300 ease-in-out hover:bg-gray-200 cursor-pointer"
+                            onClick={() => {
+                              if (i.index == tableToggleState) {
+                                tableToggle(null)
+                              } else {
+                                tableToggle(i.index)
+                              }
+                            }}
+                          >
+                            {i.title}
+                          </td>
+
+                          {tableToggleState === i.index ? (
+                            <td className="flex whitespace-nowrap !bg-white px-3 py-4 text-left text-sm text-gray-500 pl-8">
+                              {i.description}
+                            </td>
+                          ) : null}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </Container>
     </section>
   )
