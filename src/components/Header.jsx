@@ -93,11 +93,11 @@ export function Header() {
     <header className="py-10">
       <Container>
         <nav className="relative z-50 flex">
-          <div className="flex items-center md:gap-x-12">
+          <div className="flex items-center md:gap-x-12 w-full">
             <Link href="#" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
-            <div className="hidden md:flex md:gap-x-6 ml-12 font-bold">
+            <div className="hidden md:flex md:gap-x-6 ml-12 font-bold ml-auto">
               <NavLink href="#service">서비스</NavLink>
               <NavLink href="#news">보도자료</NavLink>
               <NavLink href="#qna">자주묻는질문</NavLink>

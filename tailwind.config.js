@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -29,6 +29,16 @@ module.exports = {
       },
       maxWidth: {
         '2xl': '40rem',
+      },
+      keyframes: {
+        "move-left": {
+          "100%": {
+            transform: "translateX(-77%)",
+          },
+        },
+      },
+      animation: {
+        "move-left": "move-left 40s linear infinite",
       },
     },
   },

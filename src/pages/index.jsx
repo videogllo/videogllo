@@ -23,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <Header />
-      <main>
+      <main className='overflow-x-hidden'>
           <Main />
 
           <Service />

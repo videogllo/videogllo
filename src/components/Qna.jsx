@@ -34,7 +34,7 @@ export function Qna() {
       />
       <Container className="relative">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
+          <h2 className="text-3xl tracking-tight text-white sm:text-4xl">
             자주 묻는 질문
           </h2>
           <AnimationOnScroll

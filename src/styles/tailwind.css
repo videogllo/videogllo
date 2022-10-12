@@ -7,3 +7,12 @@
 #__next {
   min-height: 100%;
 }
+
+@font-face {
+  font-family: 'NanumSquareNeo';
+  src: url(../font/NanumSquareNeo-Variable.woff2);
+}
+
+body *{
+  font-family: 'NanumSquareNeo';
+}
