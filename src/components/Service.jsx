@@ -10,6 +10,9 @@ import screenshotPayroll from '@/images/screenshots/payroll.png'
 import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 
+import 'animate.css/animate.min.css'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
+
 const features = [
   {
     title: 'Payroll',
@@ -37,7 +40,7 @@ const features = [
   },
 ]
 
-export function PrimaryFeatures() {
+export function Service() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
   useEffect(() => {
@@ -57,7 +60,7 @@ export function PrimaryFeatures() {
 
   return (
     <section
-      id="info"
+      id="service"
       aria-label="Features for running your books"
       className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
@@ -79,6 +82,7 @@ export function PrimaryFeatures() {
             details like tax compliance.
           </p>
         </div>
+
         <Tab.Group
           as="div"
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
@@ -125,27 +129,33 @@ export function PrimaryFeatures() {
                   ))}
                 </Tab.List>
               </div>
-              <Tab.Panels className="lg:col-span-7">
-                {features.map((feature) => (
-                  <Tab.Panel key={feature.title} unmount={false}>
-                    <div className="relative sm:px-6 lg:hidden">
-                      <div className="absolute -inset-x-4 top-[-6.5rem] bottom-[-4.25rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
-                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
-                        {feature.description}
-                      </p>
-                    </div>
-                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                      <Image
-                        className="w-full"
-                        src={feature.image}
-                        alt=""
-                        priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
-                      />
-                    </div>
-                  </Tab.Panel>
-                ))}
-              </Tab.Panels>
+              <AnimationOnScroll
+                animateIn="animate__fadeInLeftBig"
+                animateOut='animate__fadeOut'
+                delay={100}
+              >
+                <Tab.Panels className="lg:col-span-7">
+                  {features.map((feature) => (
+                    <Tab.Panel key={feature.title} unmount={false}>
+                      <div className="relative sm:px-6 lg:hidden">
+                        <div className="absolute -inset-x-4 top-[-6.5rem] bottom-[-4.25rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
+                        <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
+                          {feature.description}
+                        </p>
+                      </div>
+                      <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                        <Image
+                          className="w-full"
+                          src={feature.image}
+                          alt=""
+                          priority
+                          sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
+                        />
+                      </div>
+                    </Tab.Panel>
+                  ))}
+                </Tab.Panels>
+              </AnimationOnScroll>
             </>
           )}
         </Tab.Group>

@@ -3,6 +3,9 @@ import Image from 'next/future/image'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-faqs.jpg'
 
+import 'animate.css/animate.min.css'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
+
 const posts = [
   {
     title: '뉴스 제목1',
@@ -60,7 +63,7 @@ const posts = [
   },
 ]
 
-export function Faqs() {
+export function News() {
   return (
     <section
       id="news"
@@ -76,38 +79,6 @@ export function Faqs() {
         unoptimized
       />
       <Container className="relative">
-        {/* <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2
-            id="faq-title"
-            className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
-          >
-            Frequently asked questions
-          </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
-          </p>
-        </div> */}
-        {/* <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3"
-        >
-          {faqs.map((column, columnIndex) => (
-            <li key={columnIndex}>
-              <ul role="list" className="flex flex-col gap-y-8">
-                {column.map((faq, faqIndex) => (
-                  <li key={faqIndex}>
-                    <h3 className="font-display text-lg leading-7 text-slate-900">
-                      {faq.question}
-                    </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul> */}
-
         <div className="relative bg-gray-50 px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
           <div className="absolute inset-0">
             <div className="h-1/3 bg-white sm:h-2/3" />
@@ -123,38 +94,44 @@ export function Faqs() {
             </div>
             <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
               {posts.map((post) => (
-                <div
-                  key={post.title}
-                  className="flex flex-col overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer"
+                <AnimationOnScroll
+                  animateIn="animate__backInUp"
+                  animateOut='animate__fadeOutDown'
+                  delay={100}
                 >
-                  <div className="flex-shrink-0">
-                    <img
-                      className="h-48 w-full object-cover"
-                      src={post.imageUrl}
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col justify-between bg-white p-6">
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-indigo-600">
-                        <a
-                          href={post.category.href}
-                          className="hover:underline"
-                        >
-                          {post.category.name}
+                  <div
+                    key={post.title}
+                    className="flex cursor-pointer flex-col overflow-hidden rounded-lg shadow-lg transition-all duration-500 ease-in-out hover:scale-105"
+                  >
+                    <div className="flex-shrink-0">
+                      <img
+                        className="h-48 w-full object-cover"
+                        src={post.imageUrl}
+                        alt=""
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col justify-between bg-white p-6">
+                      <div className="flex-1">
+                        <p className="text-sm font-medium text-indigo-600">
+                          <a
+                            href={post.category.href}
+                            className="hover:underline"
+                          >
+                            {post.category.name}
+                          </a>
+                        </p>
+                        <a href={post.href} className="mt-2 block">
+                          <p className="text-xl font-semibold text-gray-900">
+                            {post.title}
+                          </p>
+                          <p className="mt-3 text-base text-gray-500">
+                            {post.description}
+                          </p>
                         </a>
-                      </p>
-                      <a href={post.href} className="mt-2 block">
-                        <p className="text-xl font-semibold text-gray-900">
-                          {post.title}
-                        </p>
-                        <p className="mt-3 text-base text-gray-500">
-                          {post.description}
-                        </p>
-                      </a>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </AnimationOnScroll>
               ))}
             </div>
           </div>

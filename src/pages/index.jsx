@@ -1,34 +1,38 @@
 import Head from 'next/head'
 
-import { CallToAction } from '@/components/CallToAction'
-import { Faqs } from '@/components/Faqs'
+import { Qna } from '@/components/Qna'
+import { News } from '@/components/News'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import { Hero } from '@/components/Hero'
-import { Pricing } from '@/components/Pricing'
-import { PrimaryFeatures } from '@/components/PrimaryFeatures'
-import { SecondaryFeatures } from '@/components/SecondaryFeatures'
-// import { Testimonials } from '@/components/Testimonials'
+import { Main } from '@/components/Main'
+import { Service } from '@/components/Service'
+import { Contact } from '@/components/Contact'
+
+// import 'animate.css/animate.min.css'
+// import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Videogllo</title>
+        <title>Videogllo official</title>
         <meta
           name="description"
           content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited."
         />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <Header />
       <main>
-        <Hero />
-        <PrimaryFeatures />
-        {/* <Testimonials /> */}
-        <Faqs />
-        <CallToAction />
-        {/* <Pricing /> */}
-        {/* <SecondaryFeatures /> */}
+          <Main />
+
+          <Service />
+
+          <News />
+
+          <Qna />
+
+          <Contact />
       </main>
       <Footer />
     </>
