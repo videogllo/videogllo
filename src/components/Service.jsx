@@ -9,6 +9,7 @@ import backgroundImage from '@/images/background-features.jpg'
 import screenshotService1 from '@/images/screenshots/service1.jpg'
 import screenshotService2 from '@/images/screenshots/service2.jpg'
 import screenshotService3 from '@/images/screenshots/service3.jpg'
+import screenshotService4 from '@/images/screenshots/service4.jpg'
 
 import 'animate.css/animate.min.css'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
@@ -16,27 +17,23 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 const features = [
   {
     title: '메인 페이지',
-    description:
-      "",
+    description: '',
     image: screenshotService1,
   },
   {
     title: '각종 플랫폼의 추천 영상',
-    description:
-      "",
+    description: '',
     image: screenshotService2,
   },
   {
     title: '수많은 카테고리 제공',
-    description:
-      "",
+    description: '',
     image: screenshotService3,
   },
   {
     title: '라이브 스트리밍, 숏폼 콘텐츠 정보 제공',
-    description:
-      "",
-    image: screenshotService3,
+    description: '',
+    image: screenshotService4,
   },
 ]
 
@@ -62,7 +59,7 @@ export function Service() {
     <section
       id="service"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32 mt-32"
+      className="relative mt-32 overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
       <Image
         className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
@@ -74,9 +71,9 @@ export function Service() {
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+          {/* <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             서비스 소개
-          </h2>
+          </h2> */}
           {/* <p className="mt-6 text-lg tracking-tight text-blue-100">
             한눈에 보는 편리함.
           </p> */}
@@ -90,12 +87,12 @@ export function Service() {
           {({ selectedIndex }) => (
             <>
               <div className="-mx-4 flex overflow-x-hidden pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-                <Tab.List className="w-full relative z-10 gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
+                <Tab.List className="relative z-10 w-full gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
                   {features.map((feature, featureIndex) => (
                     <div
                       key={feature.title}
                       className={clsx(
-                        'group relative rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6 w-full',
+                        'group relative w-full rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6',
                         selectedIndex === featureIndex
                           ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
                           : 'hover:bg-white/10 lg:hover:bg-white/5'
@@ -116,7 +113,7 @@ export function Service() {
                       </h3>
                       <p
                         className={clsx(
-                          'mt-2 hidden text-sm lg:block w-full',
+                          'mt-2 hidden w-full text-sm lg:block',
                           selectedIndex === featureIndex
                             ? 'text-white'
                             : 'text-blue-100 group-hover:text-white'
@@ -136,7 +133,7 @@ export function Service() {
                 >
                   {features.map((feature) => (
                     <Tab.Panel key={feature.title} unmount={false}>
-                      <div className="relative sm:px-6 lg:hidden flex">
+                      <div className="relative flex sm:px-6 lg:hidden">
                         {/* <div className="absolute -inset-x-4 top-[-6.5rem] bottom-[-4.25rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" /> */}
                         <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
                           {feature.description}

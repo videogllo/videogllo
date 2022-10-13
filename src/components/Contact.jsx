@@ -17,14 +17,14 @@ export function Contact() {
           delay={100}
         >
           <div className="bg-white">
-            <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+            <div className="mx-auto max-w-7xl py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+              {/* <h2 className="text-3xl font-bold tracking-tight text-gray-900">
                 고객센터
-              </h2>
+              </h2> */}
               {/* <p className="mt-6 max-w-3xl text-base text-gray-500">
                 친절히 모시겠습니다.
               </p> */}
-              <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
                 <div>
                   <h3 className="text-base font-medium text-gray-900">Adress</h3>
                   <p className="mt-2 text-sm text-gray-500">
@@ -42,7 +42,7 @@ export function Contact() {
                 <div>
                   <h3 className="text-base font-medium text-gray-900">Chat</h3>
                   <p className="mt-2 text-sm text-gray-500">
-                    <span className="block">Kakao Chat Link Update</span>
+                    <a href='http://pf.kakao.com/_gqGxbxj' className="block underline underline-offset-4">카카오톡 채널 링크</a>
                   </p>
                 </div>
                 {/* <div>
