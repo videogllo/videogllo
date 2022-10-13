@@ -29,7 +29,7 @@ const posts = [
     title: '크리에이터 컨텐츠 제작시장 사람과 돈이 몰린다.',
     url: 'http://news.heraldcorp.com/view.php?ud=20220928000357',
     imageUrl:
-      'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png'
+      'https://creator.design/images/og/the.creator.logo-og.png'
   },
 ]
 

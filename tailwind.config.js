@@ -38,7 +38,7 @@ module.exports = {
         },
       },
       animation: {
-        "move-left": "move-left 40s linear infinite",
+        "move-left": "move-left 60s linear infinite",
       },
     },
   },

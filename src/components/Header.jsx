@@ -97,7 +97,7 @@ export function Header() {
             <Link href="#" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
-            <div className="hidden md:flex md:gap-x-6 ml-12 font-bold ml-auto">
+            <div className="hidden md:flex md:gap-x-6 font-semibold ml-auto text-slate-900">
               <NavLink href="#service">서비스</NavLink>
               <NavLink href="#news">보도자료</NavLink>
               <NavLink href="#qna">자주묻는질문</NavLink>
