@@ -5,38 +5,32 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+
+import screenshotService1 from '@/images/screenshots/service1.jpg'
+import screenshotService2 from '@/images/screenshots/service2.jpg'
+import screenshotService3 from '@/images/screenshots/service3.jpg'
 
 import 'animate.css/animate.min.css'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const features = [
   {
-    title: 'Payroll',
+    title: '메인 페이지',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
-    image: screenshotPayroll,
+      "",
+    image: screenshotService1,
   },
   {
-    title: 'Claim expenses',
+    title: '각종 플랫폼의 추천 영상',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
-    image: screenshotExpenses,
+      "",
+    image: screenshotService2,
   },
   {
-    title: 'VAT handling',
+    title: '수많은 카테고리 제공',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
-    image: screenshotVatReturns,
-  },
-  {
-    title: 'Reporting',
-    description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
-    image: screenshotReporting,
+      "",
+    image: screenshotService3,
   },
 ]
 
@@ -62,7 +56,7 @@ export function Service() {
     <section
       id="service"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
+      className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32 mt-32"
     >
       <Image
         className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
@@ -75,12 +69,11 @@ export function Service() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+            서비스 소개
           </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
-          </p>
+          {/* <p className="mt-6 text-lg tracking-tight text-blue-100">
+            한눈에 보는 편리함.
+          </p> */}
         </div>
 
         <Tab.Group
@@ -90,13 +83,13 @@ export function Service() {
         >
           {({ selectedIndex }) => (
             <>
-              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5 overflow-x-hidden">
-                <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
+              <div className="-mx-4 flex overflow-x-hidden pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+                <Tab.List className="w-full relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
                   {features.map((feature, featureIndex) => (
                     <div
                       key={feature.title}
                       className={clsx(
-                        'group relative rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6',
+                        'group relative rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6 w-full',
                         selectedIndex === featureIndex
                           ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
                           : 'hover:bg-white/10 lg:hover:bg-white/5'
@@ -117,7 +110,7 @@ export function Service() {
                       </h3>
                       <p
                         className={clsx(
-                          'mt-2 hidden text-sm lg:block',
+                          'mt-2 hidden text-sm lg:block w-full',
                           selectedIndex === featureIndex
                             ? 'text-white'
                             : 'text-blue-100 group-hover:text-white'
@@ -129,15 +122,15 @@ export function Service() {
                   ))}
                 </Tab.List>
               </div>
-              <AnimationOnScroll
-                animateIn="animate__fadeInLeftBig"
-                animateOut='animate__fadeOut'
-                delay={100}
-              >
-                <Tab.Panels className="lg:col-span-7">
+              <Tab.Panels className="lg:col-span-7">
+                <AnimationOnScroll
+                  animateIn="animate__fadeInLeftBig"
+                  animateOut="animate__fadeOut"
+                  delay={100}
+                >
                   {features.map((feature) => (
                     <Tab.Panel key={feature.title} unmount={false}>
-                      <div className="relative sm:px-6 lg:hidden">
+                      <div className="relative sm:px-6 lg:hidden flex">
                         <div className="absolute -inset-x-4 top-[-6.5rem] bottom-[-4.25rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
                         <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
                           {feature.description}
@@ -154,8 +147,8 @@ export function Service() {
                       </div>
                     </Tab.Panel>
                   ))}
-                </Tab.Panels>
-              </AnimationOnScroll>
+                </AnimationOnScroll>
+              </Tab.Panels>
             </>
           )}
         </Tab.Group>
