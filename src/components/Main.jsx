@@ -3,19 +3,19 @@ import { useState } from 'react'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import logoTwitch from '@/images/logos/logos_black/twitch.svg'
-import logoNeflix from '@/images/logos/logos_black/neflix.svg'
-import logoYoutube from '@/images/logos/logos_black/youtube.svg'
-import logoAfreeca from '@/images/logos/logos_black/afreecaTV.svg'
+import logoTwitch from '@/images/logos/logos_black/png/twitch.png'
+import logoNeflix from '@/images/logos/logos_black/png/neflix.png'
+import logoYoutube from '@/images/logos/logos_black/png/youtube.png'
+import logoAfreeca from '@/images/logos/logos_black/png/afreecaTV.png'
 import logoAppleTv from '@/images/logos/logos_black/apple-tv+.svg'
-import logoCoupangPlay from '@/images/logos/logos_black/coupang-play.svg'
-import logoDisneyPlus from '@/images/logos/logos_black/disney+.svg'
-import logoHboMax from '@/images/logos/logos_black/HBOmax.svg'
-import logoPrimeVideo from '@/images/logos/logos_black/prime-video.svg'
-import logoTiktok from '@/images/logos/logos_black/tiktok.svg'
-import logoTving from '@/images/logos/logos_black/tving.svg'
-import logoWatcha from '@/images/logos/logos_black/watcha.svg'
-import logoWavve from '@/images/logos/logos_black/wavve.svg'
+import logoCoupangPlay from '@/images/logos/logos_black/png/coupang-play.png'
+import logoDisneyPlus from '@/images/logos/logos_black/png/disney+.png'
+import logoHboMax from '@/images/logos/logos_black/png/HBOmax.png'
+import logoPrimeVideo from '@/images/logos/logos_black/png/prime-video.png'
+import logoTiktok from '@/images/logos/logos_black/png/tiktok.png'
+import logoTving from '@/images/logos/logos_black/png/tving.png'
+import logoWatcha from '@/images/logos/logos_black/png/watcha.png'
+import logoWavve from '@/images/logos/logos_black/png/wavve.png'
 
 import VideoModal from './VideoModal'
 
@@ -113,7 +113,7 @@ export function Main() {
               >
                 {group.map((company) => (
                   <li key={company.name} className="flex w-36">
-                    <Image src={company.logo} alt={company.name} width={120} />
+                    <Image src={company.logo} alt={company.name} width={120} height={100} />
                   </li>
                 ))}
               </ul>
