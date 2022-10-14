@@ -26,7 +26,7 @@ const posts = [
       'https://www.ddaily.co.kr/data/photos/cdn/20220939/art_1664469786.jpg'
   },
   {
-    title: '크리에이터 컨텐츠 제작시장 사람과 돈이 몰린다.',
+    title: '크리에이터 이코노미 연 1000억불 시장 규모로',
     url: 'http://news.heraldcorp.com/view.php?ud=20220928000357',
     imageUrl:
       'https://creator.design/images/og/the.creator.logo-og.png'
