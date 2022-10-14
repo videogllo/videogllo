@@ -93,7 +93,7 @@ export function Qna() {
                                 }
                               }}
                             >
-                              <div className="flex items-center text-lg font-semibold">
+                              <div className="flex items-center text-base font-semibold">
                                 <QuestionMarkCircleIcon className="mt-1 h-5 w-5" />
                                 &emsp;
                                 <p>{i.title}</p>
