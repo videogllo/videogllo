@@ -11,9 +11,8 @@ export function Footer() {
         <div className="flex items-center border-t border-slate-400/10 py-10 sm:justify-between">
           <div>
             <div className="mt-6 flex items-center text-sm text-slate-500 sm:mt-1">
-              연락:{' '}
               <Image
-                className="ml-2 cursor-pointer"
+                className="cursor-pointer"
                 src={KakaoIcon}
                 alt="kakaotalk"
                 width={30}

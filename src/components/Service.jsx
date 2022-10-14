@@ -139,7 +139,7 @@ export function Service() {
                           {feature.description}
                         </p>
                       </div>
-                      <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                      <div className="mt-10 w-[100%] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                         <Image
                           className="w-full"
                           src={feature.image}

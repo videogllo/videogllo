@@ -29,7 +29,7 @@ const VideoModal = ({isVideoModal, setIsVideoModal}) => {
       onClick={modalClose}
     >
       <div
-        className="absolute left-1/2 top-[15%] h-2/3 w-2/3 min-w-[450px] max-h-[700px] -translate-x-1/2 rounded-lg border-2 border-gray-400 bg-white p-2 shadow-lg"
+        className="absolute left-1/2 top-[15%] h-2/3 w-2/3 min-w-[450px] max-h-[600px] -translate-x-1/2 rounded-lg border-2 border-gray-400 bg-black p-2 shadow-lg"
       >
         <video controls autoPlay loop className="h-full w-full focus:border-none">
           <source src="/video.mp4" type="video/mp4" />

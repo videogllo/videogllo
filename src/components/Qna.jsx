@@ -59,7 +59,7 @@ export function Qna() {
         unoptimized
       />
       <Container className="relative">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-2xl text-center flex justify-center">
           {/* <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             자주 묻는 질문
           </h2> */}
@@ -68,7 +68,7 @@ export function Qna() {
             animateOut="animate__fadeOutUp"
             delay={100}
           >
-            <div className="mt-8 flex flex-col p-2">
+            <div className="mt-8 flex flex-col p-2 w-[60vw]">
               <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8 lg:p-4">
                 <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                   <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
