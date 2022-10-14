@@ -7,7 +7,7 @@ import backgroundImage from '@/images/background-call-to-action.jpg'
 import 'animate.css/animate.min.css'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
-import { QuestionMarkCircleIcon } from '@heroicons/react/24/solid'
+// import { QuestionMarkCircleIcon } from '@heroicons/react/24/solid'
 
 const index = [
   {
@@ -68,7 +68,7 @@ export function Qna() {
             animateOut="animate__fadeOutUp"
             delay={100}
           >
-            <div className="mt-8 flex flex-col p-2 w-[60vw]">
+            <div className="mt-8 flex flex-col p-2 min-w-[40vw]">
               <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8 lg:p-4">
                 <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                   <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -84,7 +84,7 @@ export function Qna() {
                             }
                           >
                             <td
-                              className="flex cursor-pointer px-3 py-4 text-left text-sm text-gray-700 transition-all duration-300 ease-in-out hover:bg-gray-200"
+                              className="flex cursor-pointer px-3 py-4 text-left text-sm text-gray-700 transition-all duration-300 ease-in-out hover:bg-gray-200 font-semibold"
                               onClick={() => {
                                 if (i.index == tableToggleState) {
                                   tableToggle(null)
@@ -93,11 +93,9 @@ export function Qna() {
                                 }
                               }}
                             >
-                              <div className="flex items-center text-base font-semibold">
-                                <QuestionMarkCircleIcon className="mt-1 h-5 w-5" />
-                                &emsp;
-                                <p>{i.title}</p>
-                              </div>
+                                {/* <QuestionMarkCircleIcon className="mt-1 h-5 w-[24px]" /> */}
+                                {/* &emsp; */}
+                                <p className=''>❔&emsp;{i.title}</p>
                             </td>
 
                             {tableToggleState === i.index ? (
