@@ -101,7 +101,7 @@ export function Header() {
               <NavLink href="#service">서비스</NavLink>
               <NavLink href="#news">보도자료</NavLink>
               <NavLink href="#qna">자주묻는질문</NavLink>
-              <NavLink href="#contact">고객센터</NavLink>
+              <NavLink href="#footer">고객센터</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8 ml-auto">

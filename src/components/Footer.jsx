@@ -6,17 +6,17 @@ import KakaoIcon from '@/images/icon/KakaoTalk_logo.svg'
 
 export function Footer() {
   return (
-    <footer className="bg-slate-50">
+    <footer className="bg-slate-50" id='footer'>
       <Container>
         <div className="flex items-center border-t border-slate-400/10 py-10 sm:justify-between">
           <div>
-            <div className="mt-6 flex items-center text-sm text-slate-500 sm:mt-1">
+            <div className="mt-6 mb-4 flex items-center text-sm text-slate-500 sm:mt-1">
               <Image
                 className="cursor-pointer"
                 src={KakaoIcon}
                 alt="kakaotalk"
-                width={30}
-                height={30}
+                width={40}
+                height={40}
                 onClick={(e) => {
                   window.open('http://pf.kakao.com/_gqGxbxj')
                 }}
