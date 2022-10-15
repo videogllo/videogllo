@@ -46,12 +46,12 @@ const logoList = [
   { name: 'Wavve2', logo: logoWavve },
 ]
 
-export function Main({setIsVideoModal}) {
+export function Main({ setIsVideoModal }) {
   return (
     <Container className="py-20 text-center lg:pt-32">
       <h1 className="mx-auto max-w-4xl whitespace-nowrap font-display text-2xl font-medium tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-6xl">
         <p className="break-all">모든 미디어 컨텐츠의 정보</p>{' '}
-        <div className="h-6"></div>
+        <div className="h-2 sm:h-4 md:h-6"></div>
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"
@@ -67,7 +67,7 @@ export function Main({setIsVideoModal}) {
         </span>
         에서
       </h1>
-      <div className="mt-10 flex justify-center gap-x-6">
+      <div className="my-10 flex justify-center gap-x-6">
         <Button href="http://videogllo.com" target="_blank">
           서비스 이용하기
         </Button>
@@ -82,12 +82,12 @@ export function Main({setIsVideoModal}) {
         </Button>
       </div>
 
-      <div className="relative mx-auto mt-32">
-        <div className="absolute flex animate-move-left items-center overflow-hidden">
+      <div className="mt-12 relative mx-auto h-32 overflow-hidden flex items-center">
+        <div className="relative left-0 top-0 flex animate-move-left items-center">
           {logoList.map((i) => (
             <li
               key={i.name}
-              className="mx-6 flex w-[120px] list-none items-center md:mx-8 md:w-[140px]"
+              className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]"
             >
               <Image src={i.logo} alt={i.name} layout="fill"></Image>
             </li>
@@ -95,7 +95,22 @@ export function Main({setIsVideoModal}) {
         </div>
       </div>
 
-      
+      {/* <div className="relative w-full h-20 overflow-hidden">
+        <div className="absolute left-0 top-0 flex animate-move-left">
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+          <div className="bg-red-500 h-[100px] w-[100px] mx-4"></div>
+        </div>
+      </div> */}
     </Container>
   )
 }
