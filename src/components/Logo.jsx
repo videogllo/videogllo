@@ -1,7 +1,7 @@
 export function Logo(props) {
   return (
     <svg
-      width="109"
+      width="120"
       height="40"
       viewBox="0 0 2152 592"
       fill="none"

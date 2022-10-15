@@ -7,10 +7,16 @@ import { Header } from '@/components/Header'
 import { Main } from '@/components/Main'
 import { Service } from '@/components/Service'
 
+import { useState } from 'react'
+
+import VideoModal from '../components/VideoModal'
+
 // import 'animate.css/animate.min.css'
 // import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 export default function Home() {
+  const [isVideoModal, setIsVideoModal] = useState(false);
+
   return (
     <>
       <Head>
@@ -23,7 +29,7 @@ export default function Home() {
       </Head>
       <Header />
       <main className='overflow-x-hidden'>
-          <Main />
+          <Main isVideoModal={isVideoModal} setIsVideoModal={setIsVideoModal}/>
 
           <Service />
 
@@ -32,6 +38,13 @@ export default function Home() {
           <Qna />
       </main>
       <Footer />
+
+      {isVideoModal && (
+        <VideoModal
+          isVideoModal={isVideoModal}
+          setIsVideoModal={setIsVideoModal}
+        ></VideoModal>
+      )}
     </>
   )
 }

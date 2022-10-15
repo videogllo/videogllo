@@ -92,7 +92,7 @@ export function Header() {
   return (
     <header className="py-10">
       <Container>
-        <nav className="relative z-50 flex">
+        <nav className="relative z-30 flex">
           <div className="flex items-center md:gap-x-12 w-full">
             <Link href="#" aria-label="Home">
               <Logo className="h-10 w-auto" />

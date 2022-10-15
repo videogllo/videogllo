@@ -1,5 +1,4 @@
 import Image from 'next/future/image'
-import { useState } from 'react'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
@@ -16,8 +15,6 @@ import logoTiktok from '@/images/logos/logos_black/png/tiktok.png'
 import logoTving from '@/images/logos/logos_black/png/tving.png'
 import logoWatcha from '@/images/logos/logos_black/png/watcha.png'
 import logoWavve from '@/images/logos/logos_black/png/wavve.png'
-
-import VideoModal from './VideoModal'
 
 const logoList = [
   { name: 'Youtube', logo: logoYoutube },
@@ -49,9 +46,7 @@ const logoList = [
   { name: 'Wavve2', logo: logoWavve },
 ]
 
-export function Main() {
-  const [isVideoModal, setIsVideoModal] = useState(false)
-
+export function Main({setIsVideoModal}) {
   return (
     <Container className="py-20 text-center lg:pt-32">
       <h1 className="mx-auto max-w-4xl whitespace-nowrap font-display text-2xl font-medium tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-6xl">
@@ -100,12 +95,7 @@ export function Main() {
         </div>
       </div>
 
-      {isVideoModal && (
-        <VideoModal
-          isVideoModal={isVideoModal}
-          setIsVideoModal={setIsVideoModal}
-        ></VideoModal>
-      )}
+      
     </Container>
   )
 }

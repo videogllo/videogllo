@@ -28,7 +28,7 @@ const VideoModal = ({ isVideoModal, setIsVideoModal }) => {
       ref={modalRef}
       onClick={modalClose}
     >
-      <div className="absolute left-1/2 top-[15%] h-2/3 min-h-[300px] w-2/3 min-w-[450px] -translate-x-1/2 rounded-lg border-2 border-gray-400 bg-black p-2 shadow-lg">
+      <div className="absolute left-1/2 top-[15%] h-2/3 min-h-[200px] w-2/3 min-w-[450px] -translate-x-1/2 rounded-lg border-2 border-gray-400 bg-black p-2 shadow-lg">
         <video
           controls
           autoPlay
