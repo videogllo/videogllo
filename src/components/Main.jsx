@@ -82,7 +82,7 @@ export function Main({ setIsVideoModal }) {
         </Button>
       </div>
 
-      <div className="mt-12 relative mx-auto h-32 overflow-hidden flex items-center">
+      <div className="mt-24 relative mx-auto h-32 overflow-hidden flex items-center">
         <div className="relative left-0 top-0 flex animate-move-left items-center">
           {logoList.map((i) => (
             <li
