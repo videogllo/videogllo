@@ -67,7 +67,7 @@ export function Service() {
         alt=""
         width={2245}
         height={1636}
-        unoptimized
+        priority="true"
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
@@ -126,11 +126,11 @@ export function Service() {
                 </Tab.List>
               </div>
               <Tab.Panels className="lg:col-span-7">
-                <AnimationOnScroll
+                {/* <AnimationOnScroll
                   animateIn="animate__fadeInLeftBig"
                   animateOut="animate__fadeOut"
                   delay={100}
-                >
+                > */}
                   {features.map((feature) => (
                     <Tab.Panel key={feature.title} unmount={false}>
                       <div className="relative flex sm:px-6 lg:hidden">
@@ -143,14 +143,13 @@ export function Service() {
                         <Image
                           className="w-full"
                           src={feature.image}
-                          alt=""
-                          priority
+                          alt={feature.description}
                           sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
                         />
                       </div>
                     </Tab.Panel>
                   ))}
-                </AnimationOnScroll>
+                {/* </AnimationOnScroll> */}
               </Tab.Panels>
             </>
           )}

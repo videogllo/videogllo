@@ -19,13 +19,44 @@ import logoWavve from '@/images/logos/logos_black/png/wavve.png'
 
 import VideoModal from './VideoModal'
 
+const logoList = [
+  { name: 'Youtube', logo: logoYoutube },
+  { name: 'Neflix', logo: logoNeflix },
+  { name: 'Twitch', logo: logoTwitch },
+  { name: 'Afreeca', logo: logoAfreeca },
+  { name: 'AppleTv', logo: logoAppleTv },
+  { name: 'CoupangPlay', logo: logoCoupangPlay },
+  { name: 'DisneyPlus', logo: logoDisneyPlus },
+  { name: 'HboMax', logo: logoHboMax },
+  { name: 'PrimeVideo', logo: logoPrimeVideo },
+  { name: 'Tiktok', logo: logoTiktok },
+  { name: 'Tving', logo: logoTving },
+  { name: 'Watcha', logo: logoWatcha },
+  { name: 'Wavve', logo: logoWavve },
+
+  { name: 'Youtube2', logo: logoYoutube },
+  { name: 'Neflix2', logo: logoNeflix },
+  { name: 'Twitch2', logo: logoTwitch },
+  { name: 'Afreeca2', logo: logoAfreeca },
+  { name: 'AppleTv2', logo: logoAppleTv },
+  { name: 'CoupangPlay2', logo: logoCoupangPlay },
+  { name: 'DisneyPlus2', logo: logoDisneyPlus },
+  { name: 'HboMax2', logo: logoHboMax },
+  { name: 'PrimeVideo2', logo: logoPrimeVideo },
+  { name: 'Tiktok2', logo: logoTiktok },
+  { name: 'Tving2', logo: logoTving },
+  { name: 'Watcha2', logo: logoWatcha },
+  { name: 'Wavve2', logo: logoWavve },
+]
+
 export function Main() {
   const [isVideoModal, setIsVideoModal] = useState(false)
 
   return (
-    <Container className="pt-20 pb-20 text-center lg:pt-32">
-      <h1 className="mx-auto max-w-4xl whitespace-nowrap font-display text-2xl font-medium tracking-tight text-slate-900 sm:text-3xl md:text-4xl lg:text-5xl">
-        <p className='break-all'>모든 미디어 컨텐츠의 정보</p> <div className="h-6"></div>
+    <Container className="py-20 text-center lg:pt-32">
+      <h1 className="mx-auto max-w-4xl whitespace-nowrap font-display text-2xl font-medium tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-6xl">
+        <p className="break-all">모든 미디어 컨텐츠의 정보</p>{' '}
+        <div className="h-6"></div>
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"
@@ -40,22 +71,12 @@ export function Main() {
           </span>
         </span>
         에서
-        {/* <br></br>
-        미디어 컨텐츠 포털형 큐레이션 서비스 플랫폼, 비데오글로 */}
       </h1>
-      {/* <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        경험해보지 못한 편리함. 미디어 컨텐츠에 대한 모든 정보를
-        <br></br>
-        이제는 비데오글로에서 간편하게 확인하세요.
-      </p> */}
       <div className="mt-10 flex justify-center gap-x-6">
         <Button href="http://videogllo.com" target="_blank">
           서비스 이용하기
         </Button>
-        <Button
-          onClick={e => setIsVideoModal(true)}
-          variant="outline"
-        >
+        <Button onClick={(e) => setIsVideoModal(true)} variant="outline">
           <svg
             aria-hidden="true"
             className="h-3 w-3 flex-none fill-blue-600 group-active:fill-current"
@@ -65,61 +86,18 @@ export function Main() {
           <span className="ml-3">소개 영상</span>
         </Button>
       </div>
-      <div className="mt-32 lg:mt-48">
-        <ul
-          role="list"
-          className="center relative mt-8 flex items-center gap-x-8 overflow-hidden sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
-          style={{ transform: 'translate3d(0,0,0)' }}
-        >
-          {[
-            [
-              { name: 'Youtube', logo: logoYoutube },
-              { name: 'Neflix', logo: logoNeflix },
-              { name: 'Twitch', logo: logoTwitch },
-              { name: 'Afreeca', logo: logoAfreeca },
-              { name: 'AppleTv', logo: logoAppleTv },
-              { name: 'CoupangPlay', logo: logoCoupangPlay },
-              { name: 'DisneyPlus', logo: logoDisneyPlus },
-              { name: 'HboMax', logo: logoHboMax },
-              { name: 'PrimeVideo', logo: logoPrimeVideo },
-              { name: 'Tiktok', logo: logoTiktok },
-              { name: 'Tving', logo: logoTving },
-              { name: 'Watcha', logo: logoWatcha },
-              { name: 'Wavve', logo: logoWavve },
 
-              { name: 'Youtube1', logo: logoYoutube },
-              { name: 'Neflix1', logo: logoNeflix },
-              { name: 'Twitch1', logo: logoTwitch },
-              { name: 'Afreeca1', logo: logoAfreeca },
-              { name: 'AppleTv1', logo: logoAppleTv },
-              { name: 'CoupangPlay1', logo: logoCoupangPlay },
-              { name: 'DisneyPlus1', logo: logoDisneyPlus },
-              { name: 'HboMax1', logo: logoHboMax },
-              { name: 'PrimeVideo1', logo: logoPrimeVideo },
-              { name: 'Tiktok1', logo: logoTiktok },
-              { name: 'Tving1', logo: logoTving },
-              { name: 'Watcha1', logo: logoWatcha },
-              { name: 'Wavve1', logo: logoWavve },
-            ],
-          ].map((group, groupIndex) => (
-            <li key={groupIndex}>
-              <ul
-                role="list"
-                className="flex animate-move-left items-center gap-y-8 overflow-hidden px-12 sm:flex-row sm:gap-x-12 sm:gap-y-0"
-                style={{
-                  transform: 'translate3d(0,0,0)',
-                  animationDelay: '1s',
-                }}
-              >
-                {group.map((company) => (
-                  <li key={company.name} className="flex w-36">
-                    <Image src={company.logo} alt={company.name} width={120} height="auto" priority="true" />
-                  </li>
-                ))}
-              </ul>
+      <div className="relative mx-auto mt-32">
+        <div className="absolute flex animate-move-left items-center overflow-hidden">
+          {logoList.map((i) => (
+            <li
+              key={i.name}
+              className="mx-6 flex w-[120px] list-none items-center md:mx-8 md:w-[140px]"
+            >
+              <Image src={i.logo} alt={i.name} layout="fill"></Image>
             </li>
           ))}
-        </ul>
+        </div>
       </div>
 
       {isVideoModal && (

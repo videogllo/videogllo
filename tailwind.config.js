@@ -32,13 +32,16 @@ module.exports = {
       },
       keyframes: {
         "move-left": {
+          // "0%":{
+          //   transform: "translateX(20%)",
+          // },
           "100%": {
-            transform: "translateX(-77%)",
+            transform: "translateX(-50%)",
           },
         },
       },
       animation: {
-        "move-left": "move-left 60s linear infinite",
+        "move-left": "move-left 33s linear infinite",
       },
     },
   },
