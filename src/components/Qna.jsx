@@ -1,8 +1,13 @@
 import Image from 'next/future/image'
+import Text from '@/images/text.png'
+import Blink from '@/images/bling.png'
 import { useState } from 'react'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-call-to-action.jpg'
+
+
+import { Button } from '@/components/Button'
 
 import 'animate.css/animate.min.css'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
@@ -49,74 +54,115 @@ export function Qna() {
   }
 
   return (
-    <section id="qna" className="relative overflow-hidden bg-blue-600 py-32">
-      <Image
-        className="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
-        src={backgroundImage}
-        alt=""
-        width={2347}
-        height={1244}
-        unoptimized
-      />
+    <section id="qna" className="relative overflow-hidden bg-gray-900 text-white pt-10 pb-20">
       <Container className="relative">
-        <div className="mx-auto max-w-2xl text-center flex justify-center">
-          {/* <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            자주 묻는 질문
-          </h2> */}
-          <AnimationOnScroll
-            animateIn="animate__fadeInDown"
-            animateOut="animate__fadeOutUp"
-            delay={100}
-          >
-            <div className="mt-8 flex flex-col p-2 min-w-[40vw]">
-              <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8 lg:p-4">
-                <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                  <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                    <table className="min-w-full divide-y divide-gray-300">
-                      <tbody className="bg-white">
-                        {index.map((i, i2) => (
-                          <tr
-                            key={i.index}
-                            className={
-                              i2 % 2 === 0
-                                ? 'flex flex-col text-left'
-                                : 'flex flex-col bg-gray-50 text-left'
-                            }
-                          >
-                            <td
-                              className="flex cursor-pointer px-3 py-4 text-left text-sm text-gray-700 transition-all duration-300 ease-in-out hover:bg-gray-200 font-semibold"
-                              onClick={() => {
-                                if (i.index == tableToggleState) {
-                                  tableToggle(null)
-                                } else {
-                                  tableToggle(i.index)
-                                }
-                              }}
-                            >
-                                {/* <QuestionMarkCircleIcon className="mt-1 h-5 w-[24px]" /> */}
-                                {/* &emsp; */}
-                                <p className=''>❔&emsp;{i.title}</p>
-                            </td>
-
-                            {tableToggleState === i.index ? (
-                              <td
-                                className="flex border-t border-gray-400 !bg-white px-3 py-4 pl-8 text-left text-base font-semibold text-gray-600"
-                                style={{ wordBreak: 'keep-all' }}
-                              >
-                                {i.description}
-                              </td>
-                            ) : null}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </AnimationOnScroll>
+        <div className='flex justify-center'>
+          <Image
+              className="cursor-pointer"
+              src={Text}
+              alt="지금 바로!"
+              width={150}
+              height={150}
+              onClick={(e) => {
+                window.open('http://pf.kakao.com/_gqGxbxj')
+              }}
+            ></Image>
+        </div>
+        <div className='flex justify-center'>
+          <p className='text-3xl font-bold font-sans'>모든 <span className='text-3xl font-bold font-sans text-blue-600'>미디어 컨텐츠</span>의 정보</p>
+        </div>
+        <div className='flex justify-center py-2.5'>
+          <p className='flex justify-center text-3xl font-bold font-sans'><span className='text-3xl font-bold font-sans text-blue-600'>비데오글로</span>에서 즐겨보세요
+            <Image
+              className="cursor-pointer"
+              src={Blink}
+              alt="★"
+              width={30}
+              height={40}
+            ></Image>
+          </p>
+        </div>
+        <div className='flex justify-center pt-20'>
+          <div className='bg-blue-600 rounded-lg py-3 w-6/12 text-center font-bold hover:bg-blue-800 cursor-pointer' onClick={(e) => {
+                window.open('http://videogllo.com')
+              }}>
+            <Button href="http://videogllo.com" target="_blank">
+              서비스 이용하기
+            </Button>
+          </div>
         </div>
       </Container>
     </section>
   )
 }
+
+
+// <section id="qna" className="relative overflow-hidden bg-blue-600 py-32">
+//       <Image
+//         className="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
+//         src={backgroundImage}
+//         alt=""
+//         width={2347}
+//         height={1244}
+//         unoptimized
+//       />
+//       <Container className="relative">
+//         <div className="mx-auto max-w-2xl text-center flex justify-center">
+//           {/* <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+//             자주 묻는 질문
+//           </h2> */}
+//           <AnimationOnScroll
+//             animateIn="animate__fadeInDown"
+//             animateOut="animate__fadeOutUp"
+//             delay={100}
+//           >
+//             <div className="mt-8 flex flex-col p-2 min-w-[40vw]">
+//               <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8 lg:p-4">
+//                 <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+//                   <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+//                     <table className="min-w-full divide-y divide-gray-300">
+//                       <tbody className="bg-white">
+//                         {index.map((i, i2) => (
+//                           <tr
+//                             key={i.index}
+//                             className={
+//                               i2 % 2 === 0
+//                                 ? 'flex flex-col text-left'
+//                                 : 'flex flex-col bg-gray-50 text-left'
+//                             }
+//                           >
+//                             <td
+//                               className="flex cursor-pointer px-3 py-4 text-left text-sm text-gray-700 transition-all duration-300 ease-in-out hover:bg-gray-200 font-semibold"
+//                               onClick={() => {
+//                                 if (i.index == tableToggleState) {
+//                                   tableToggle(null)
+//                                 } else {
+//                                   tableToggle(i.index)
+//                                 }
+//                               }}
+//                             >
+//                                 {/* <QuestionMarkCircleIcon className="mt-1 h-5 w-[24px]" /> */}
+//                                 {/* &emsp; */}
+//                                 <p className=''>❔&emsp;{i.title}</p>
+//                             </td>
+
+//                             {tableToggleState === i.index ? (
+//                               <td
+//                                 className="flex border-t border-gray-400 !bg-white px-3 py-4 pl-8 text-left text-base font-semibold text-gray-600"
+//                                 style={{ wordBreak: 'keep-all' }}
+//                               >
+//                                 {i.description}
+//                               </td>
+//                             ) : null}
+//                           </tr>
+//                         ))}
+//                       </tbody>
+//                     </table>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </AnimationOnScroll>
+//         </div>
+//       </Container>
+//     </section>

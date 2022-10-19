@@ -6,7 +6,7 @@ import logoTwitch from '@/images/logos/logos_black/png/twitch.png'
 import logoNeflix from '@/images/logos/logos_black/png/neflix.png'
 import logoYoutube from '@/images/logos/logos_black/png/youtube.png'
 import logoAfreeca from '@/images/logos/logos_black/png/afreecaTV.png'
-import logoAppleTv from '@/images/logos/logos_black/png/apple-tv+2.png'
+import logoAppleTv from '@/images/logos/logos_black/appletv.png'
 import logoCoupangPlay from '@/images/logos/logos_black/png/coupang-play.png'
 import logoDisneyPlus from '@/images/logos/logos_black/png/disney+.png'
 import logoHboMax from '@/images/logos/logos_black/png/HBOmax.png'
@@ -68,9 +68,6 @@ export function Main({ setIsVideoModal }) {
         에서
       </h1>
       <div className="my-10 flex justify-center gap-x-6">
-        <Button href="http://videogllo.com" target="_blank">
-          서비스 이용하기
-        </Button>
         <Button onClick={(e) => setIsVideoModal(true)} variant="outline">
           <svg
             aria-hidden="true"
