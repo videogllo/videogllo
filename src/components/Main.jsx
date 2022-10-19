@@ -86,7 +86,7 @@ export function Main({ setIsVideoModal }) {
               key={i.name}
               className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]"
             >
-              <Image src={i.logo} alt={i.name} layout="fill" rel="preload" priority={true}></Image>
+              <Image src={i.logo} alt={i.name} layout="fill" priority={true}></Image>
             </li>
           ))}
         </div>
