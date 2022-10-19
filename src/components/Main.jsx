@@ -1,20 +1,20 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import logoTwitch from '@/images/logos/logos_black/png/twitch.png'
-import logoNeflix from '@/images/logos/logos_black/png/neflix.png'
-import logoYoutube from '@/images/logos/logos_black/png/youtube.png'
-import logoAfreeca from '@/images/logos/logos_black/png/afreecaTV.png'
-import logoAppleTv from '@/images/logos/logos_black/appletv.png'
-import logoCoupangPlay from '@/images/logos/logos_black/png/coupang-play.png'
-import logoDisneyPlus from '@/images/logos/logos_black/png/disney+.png'
-import logoHboMax from '@/images/logos/logos_black/png/HBOmax.png'
-import logoPrimeVideo from '@/images/logos/logos_black/png/prime-video.png'
-import logoTiktok from '@/images/logos/logos_black/png/tiktok.png'
-import logoTving from '@/images/logos/logos_black/png/tving.png'
-import logoWatcha from '@/images/logos/logos_black/png/watcha.png'
-import logoWavve from '@/images/logos/logos_black/png/wavve.png'
+import logoTwitch from '/src/images/logos/logos_black/png/twitch.png'
+import logoNeflix from '/src/images/logos/logos_black/png/neflix.png'
+import logoYoutube from '/src/images/logos/logos_black/png/youtube.png'
+import logoAfreeca from '/src/images/logos/logos_black/png/afreecaTV.png'
+import logoAppleTv from '/src/images/logos/logos_black/appletv.png'
+import logoCoupangPlay from '/src/images/logos/logos_black/png/coupang-play.png'
+import logoDisneyPlus from '/src/images/logos/logos_black/png/disney+.png'
+import logoHboMax from '/src/images/logos/logos_black/png/HBOmax.png'
+import logoPrimeVideo from '/src/images/logos/logos_black/png/prime-video.png'
+import logoTiktok from '/src/images/logos/logos_black/png/tiktok.png'
+import logoTving from '/src/images/logos/logos_black/png/tving.png'
+import logoWatcha from '/src/images/logos/logos_black/png/watcha.png'
+import logoWavve from '/src/images/logos/logos_black/png/wavve.png'
 
 const logoList = [
   { name: 'Youtube', logo: logoYoutube },
@@ -80,13 +80,15 @@ export function Main({ setIsVideoModal }) {
       </div>
 
       <div className="mt-24 relative mx-auto h-32 overflow-hidden flex items-center">
-        <div className="relative left-0 top-0 flex  items-center">
+        <div className="relative left-0 top-0 flex animate-move-left items-center">
           {logoList.map((i) => (
             <li
               key={i.name}
               className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]"
             >
-              <Image src={i.logo} alt={i.name} layout="fill"></Image>
+              <Image
+              src={i.logo}
+            ></Image>
             </li>
           ))}
         </div>
