@@ -81,93 +81,14 @@ export function Main({ setIsVideoModal }) {
 
       <div className="mt-24 relative mx-auto h-32 overflow-hidden flex items-center">
         <div className="relative left-0 top-0 flex animate-move-left items-center">
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoTwitch}
-              alt="Twitch"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoNeflix}
-              alt="Netflix"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoYoutube}
-              alt="Youtube"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoAfreeca}
-              alt="Afreeca"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoAppleTv}
-              alt="AppleTV+"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoCoupangPlay}
-              alt="CoupangPlay"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoDisneyPlus}
-              alt="DisneyPlus"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoHboMax}
-              alt="HboMax"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoPrimeVideo}
-              alt="PrimeumVideo"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoTiktok}
-              alt="TikTok"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoTving}
-              alt="Tving"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoWatcha}
-              alt="Watcha"
-            ></Image>
-          </li>
-          <li className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]">
-            <Image
-              src={logoWavve}
-              alt="Wave"
-            ></Image>
-          </li>
-
-          {/* {logoList.map((i) => (
+          {logoList.map((i) => (
             <li
               key={i.name}
               className="mx-6 flex w-[100px] list-none items-center md:mx-8 md:w-[140px] sm:w-[120px]"
             >
               <Image src={i.logo} alt={i.name} layout="fill"></Image>
             </li>
-          ))} */}
+          ))}
         </div>
       </div>
 
