@@ -10,7 +10,7 @@ export function Footer() {
       <Container>
         <div className="flex items-center border-t border-slate-400/10 pt-10 pb-5 sm:justify-between  md:flex-row">
           <div className='flex-col'>
-            <p className='py-2 text-gray-600 font-semibold'>비데오글로(VIDEOGLLO)</p>
+            <p className='py-2 text-gray-600 font-semibold'>비데오글로(Videogllo)</p>
             <small className='text-xs text-slate-500'>대표 : 김종훈</small><br/>
             <small className='text-xs text-slate-500'>주소 : 서울특별시 강서구 마곡중앙6로 11 315호 비데오글로</small><br/>
             <small className='text-xs text-slate-500'>사업자 등록번호 : 114-54-04443</small><br/>

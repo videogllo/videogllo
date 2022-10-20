@@ -84,9 +84,9 @@ export function Qna() {
         </div>
         <div className='flex justify-center pt-20'>
           <div className='bg-blue-600 rounded-lg py-3 w-6/12 text-center font-bold hover:bg-blue-800 cursor-pointer' onClick={(e) => {
-                window.open('http://videogllo.com')
+                window.open('http://videoowl.net')
               }}>
-            <Button href="http://videogllo.com" target="_blank">
+            <Button href="http://videoowl.net" target="_blank">
               서비스 이용하기
             </Button>
           </div>
