@@ -80,7 +80,7 @@ function MobileNavigation() {
           >
             <MobileNavLink href="#service">서비스</MobileNavLink>
             <MobileNavLink href="#news">보도자료</MobileNavLink>
-            <MobileNavLink href="#qna">자주묻는질문</MobileNavLink>
+            {/* <MobileNavLink href="#qna">자주묻는질문</MobileNavLink> */}
             <MobileNavLink href="#contact">고객센터</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
@@ -105,7 +105,7 @@ export function Header() {
             <div className="hidden md:flex md:gap-x-6 font-semibold ml-auto text-slate-900">
               <NavLink href="#service">서비스</NavLink>
               <NavLink href="#news">보도자료</NavLink>
-              <NavLink href="#qna">자주묻는질문</NavLink>
+              {/* <NavLink href="#qna">자주묻는질문</NavLink> */}
               <NavLink href="#footer">고객센터</NavLink>
             </div>
           </div>
