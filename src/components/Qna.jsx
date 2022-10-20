@@ -69,10 +69,10 @@ export function Qna() {
             ></Image>
         </div>
         <div className='flex justify-center'>
-          <p className='text-2xl sm:text-3xl font-bold font-sans'>모든 <span className='text-2xl sm:text-3xl font-bold font-sans text-blue-600'>미디어 컨텐츠</span>의 정보</p>
+          <p className='text-lg sm:text-3xl font-bold font-sans'>모든 <span className='text-lg sm:text-3xl font-bold font-sans text-blue-600'>미디어 컨텐츠</span>의 정보</p>
         </div>
         <div className='flex justify-center py-2.5'>
-          <p className='flex justify-center text-2xl sm:text-3xl font-bold font-sans'><span className='text-2xl sm:text-3xl font-bold font-sans text-blue-600'>비데오글로</span>에서 즐겨보세요
+          <p className='flex justify-center text-lg sm:text-3xl font-bold font-sans'><span className='text-lg sm:text-3xl font-bold font-sans text-blue-600'>비데오글로</span>에서 즐겨보세요
             <Image
               className="cursor-pointer"
               src={Blink}
