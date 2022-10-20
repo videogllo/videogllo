@@ -61,8 +61,8 @@ export function Qna() {
               className="cursor-pointer"
               src={Text}
               alt="지금 바로!"
-              width={150}
-              height={150}
+              width={130}
+              height={130}
               onClick={(e) => {
                 window.open('http://pf.kakao.com/_gqGxbxj')
               }}
