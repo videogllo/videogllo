@@ -26,7 +26,6 @@ export default function Home() {
           content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited."
         />
         <link rel="icon" href="/favicon.svg" />
-        <link rel="manifest" href="/manifest.json" />
       </Head>
       
       <Header />
